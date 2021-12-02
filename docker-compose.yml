@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  api:
+    container_name: nestjs
+    build: .
+    tty: true
+    ports:
+      - "3000:3000"
+    volumes:
+      - type: bind
+        source: .
+        target: /workspace
